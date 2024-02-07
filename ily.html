@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from Gustav</title>
+    <style>
+        html {
+            background: rgb(255, 39, 118);
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-family: sans-serif;
+        }
+
+        .rectangulo {
+            width: 320px;
+            height: 480px;
+            border: 2px solid black;
+            box-shadow: 5px 5px 10px black;
+            background: url("https://i.pinimg.com/564x/92/db/7c/92db7ce210bff3cbf450f41ee8fd42a8.jpg");
+            text-align: center;
+            border-radius: 2rem;
+            background-size: 100%;
+        }
+
+        h2 {
+            color: rgb(197, 7, 7);
+            margin-top: 5%;
+            font-size: 30px;
+            padding: 5px 30px;
+            font-family: monospace;
+        }
+
+        .boton1 {
+            height: 40px;
+            width: 40px;
+            background: rgb(229, 13, 125);
+            border: 3px solid black;
+            margin: 0%;
+            margin-top: 8%;
+            font-size: medium;
+            border-radius: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .boton2 {
+            background: rgb(229, 13, 125);
+            width: 40px;
+            height: 40px;
+            border: 3px solid black;
+            margin-top: 8%;
+            font-size: medium;
+            border-radius: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(.99);
+                box-shadow: 0 0 0 0 rgb(231, 97, 171);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 3px rgb(231, 97, 171);
+            }
+
+            100% {
+                transform: scale(.99);
+                box-shadow: 0 0 0 0 rgb(231, 97, 171);
+            }
+        }
+
+        img {
+            width: 250px;
+            border-radius: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="rectangulo">
+        <h2>Do u want to be my girlfriend Mav?</h2>
+        <img src="https://i.pinimg.com/564x/87/cb/c4/87cbc4d48dee742deda278233d2e208b.jpg"><br />
+        <input type="button" id='yes' class="boton1" value="Yes" />
+        <input class="boton2" type="button" id="not" onmousemove="evitar()" value="NO" />
+    </article>
+
+    <script>
+        const botonsi = document.getElementById('yes');
+
+        function respuestasi() {
+            alert('ok were dating now, Je t.aime♥');
+            location.href = ""
+        }
+
+        function evitar() {
+            width = 300
+            height = 400
+
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('not').style.position = 'absolute';
+            document.getElementById('not').style.top = newHeight + 'px';
+            document.getElementById('not').style.left = newWidth + 'px';
+        }
+
+        botonsi.addEventListener('click', respuestasi);
+    </script>
+</body>
+
+</html>
